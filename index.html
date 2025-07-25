@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="box">
+    <div class="background">
+
         <div class="left">
             <img src="./assets/icons/avatar.jpg" class="avatar">
             <div class="icons_top">
-                <img src="./assets/icons/聊天选中.svg" class="icon">
-                <img src="./assets/icons/联系人.svg" class="icon">
-                <img src="./assets/icons/文件.svg" class="icon">
-                <img src="./assets/icons/朋友圈.svg" class="icon">
-                <img src="./assets/icons/视频号.svg" class="icon">
-                <img src="./assets/icons/看一看.svg" class="icon">
-                <img src="./assets/icons/搜一搜-copy.svg" class="icon">
+                <img src="./assets/icons/聊天选中.svg">
+                <img src="./assets/icons/联系人.svg">
+                <img src="./assets/icons/文件.svg">
+                <div class="icon-wrapper circle-icon">
+                    <img src="./assets/icons/朋友圈.svg" class="circle-icon-img">
+                    <span class="red-dot">1</span>
+                </div>
+                <img src="./assets/icons/视频号.svg">
+                <img src="./assets/icons/看一看.svg">
+                <img src="./assets/icons/搜一搜-copy.svg">
                 
             </div>
             <div class="icons_bottom">
@@ -31,6 +35,7 @@
         
         <div class="mid">
             <div class="search-bar">
+                <img src="./assets/icons/搜索.svg" class="search-icon">
                 <input type="text" placeholder="搜索">
                 <img src="./assets/icons/加号（展开）.svg" class="add-btn">
             </div>
@@ -39,6 +44,7 @@
                 <div class="chat-info">
                     <p class="chat-title">文件传输助手</p>
                     <p class="chat-preview">This is a message</p>
+                    
                 </div>
                 <span class="chat-time">20:49</span>
             </div>
@@ -52,17 +58,25 @@
             <div class="chat-body">
                 <p class="chat-time">20:49</p>
                 <div class="message-row">
-                    <div class="message-bubble">This is a message</div>
+                    <div class="message-bubble">This is a message
+                        <div class="triangle-right"></div>
+                    </div>
                     <img src="./assets/icons/avatar.jpg" class="chat-avatar">
-                </div>
+                </div>    
             </div>
+
             <div class="chat-footer">
-                <img src="./assets/icons/笑脸.svg" class="footer-icon">
-                <img src="./assets/icons/文件.svg" class="footer-icon">
-                <img src="./assets/icons/剪切.svg" class="footer-icon">
-                <img src="./assets/icons/聊天.svg" class="footer-icon">
+                <div class="footer-icon">
+                    <img src="./assets/icons/笑脸.svg" class="footer-icon">
+                    <img src="./assets/icons/文件.svg" class="footer-icon">
+                    <img src="./assets/icons/剪切.svg" class="footer-icon">
+                    <img src="./assets/icons/聊天.svg" class="footer-icon">
+                </div>
+                <input class="footer-input">
             </div>
         </div>
+
     </div>
+
 </body>
 </html>
