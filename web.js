@@ -32,9 +32,7 @@ function renderUsersList() {
           const li = document.createElement('li');
           li.innerText = user.username;
           li.classList.add('username');
-          // 点击用户名跳到详情页（可选，后续可扩展）
           li.addEventListener('click', () => {
-            // 这里示例直接 alert，真实场景可以用 #user?id=…
             alert(`你点击了用户：${user.name}（ID=${user.id}）`);
           });
           ul.appendChild(li);

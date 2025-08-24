@@ -83,7 +83,7 @@ function highlightCurrentChat(contactId) {
   });
 }
 
-function addChatToMiddle(contactId, contactName) {
+function addChatToMiddle(contactId, contactName, avatarColor) {
   const chatList = document.getElementById('chat-list-page');
   const idStr = String(contactId);
 
@@ -108,6 +108,8 @@ function addChatToMiddle(contactId, contactName) {
     avatar.textContent = contactName.charAt(0).toUpperCase();
     if (userData && userData.color) {
       avatar.style.backgroundColor = userData.color;
+    } else {
+      avatar.style.backgroundColor = avatarColor;
     }
   }
 
@@ -124,14 +126,14 @@ function addChatToMiddle(contactId, contactName) {
   chatList.appendChild(item);
 
   const contactList = JSON.parse(localStorage.getItem('chat_contacts') || '[]');
-  contactList.push({ id: contactId, name: contactName });
+  contactList.push({ id: contactId, name: contactName, color : avatar.style.backgroundColor});
   localStorage.setItem('chat_contacts', JSON.stringify(contactList));
 }
 
 function loadChatContactsFromStorage() {
   const savedContacts = JSON.parse(localStorage.getItem('chat_contacts') || '[]');
   savedContacts.forEach(contact => {
-    addChatToMiddle(contact.id, contact.name);
+    addChatToMiddle(contact.id, contact.name, contact.color);
   });
 }
 
