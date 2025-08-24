@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    
+    
     <div class="background">
 
         <div class="left">
             <img src="./assets/icons/avatar.jpg" class="avatar">
             <div class="icons_top">
-                <img src="./assets/icons/聊天选中.svg">
-                <img src="./assets/icons/联系人.svg">
+                <a href="#chat">
+                <a href="#chat" id="link-chat">
+                    <img src="./assets/icons/聊天选中.svg" alt="聊天图标" id="icon-chat" class="icon" />
+                </a>
+                <a href="#users" id="link-users">
+                    <img src="./assets/icons/联系人.svg" alt="联系人图标" id="icon-users" class="icon" />
+                </a>
                 <img src="./assets/icons/文件.svg">
-                <div class="icon-wrapper circle-icon">
+                <div class="icon-wrapper">
                     <img src="./assets/icons/朋友圈.svg" class="circle-icon-img">
                     <span class="red-dot">1</span>
                 </div>
@@ -29,7 +36,7 @@
                 <img src="./assets/icons/设备2.svg" class="icon">
                 <img src="./assets/icons/菜单.svg" class="icon">
             </div>
-
+            
         </div>
 
         
@@ -40,43 +47,51 @@
                 <img src="./assets/icons/加号（展开）.svg" class="add-btn">
             </div>
             <div class="chat-item">
+                <a href='#chat?id=assistant&name=文件传输助手'>
                 <img src="./assets/icons/文件传输助手.svg" class="chat-avatar">
-                <div class="chat-info">
-                    <p class="chat-title">文件传输助手</p>
-                    <p class="chat-preview">This is a message</p>
-                    
-                </div>
-                <span class="chat-time">20:49</span>
+                <span class="chat-title">文件传输助手</span>             
+                </a>
             </div>
+            <div id="users-page"></div>
+            <div id="chat-list-page"></div>
         </div>
 
         
         <div class="right">
-            <div class="chat-header">
-                <span>文件传输助手</span>
-            </div>
-            <div class="chat-body">
-                <p class="chat-time">20:49</p>
-                <div class="message-row">
-                    <div class="message-bubble">This is a message
-                        <div class="triangle-right"></div>
-                    </div>
-                    <img src="./assets/icons/avatar.jpg" class="chat-avatar">
-                </div>    
-            </div>
+            <div id="chat-page" class="chat-page" style="display:none;">
 
-            <div class="chat-footer">
-                <div class="footer-icon">
-                    <img src="./assets/icons/笑脸.svg" class="footer-icon">
-                    <img src="./assets/icons/文件.svg" class="footer-icon">
-                    <img src="./assets/icons/剪切.svg" class="footer-icon">
-                    <img src="./assets/icons/聊天.svg" class="footer-icon">
+                <!-- 标题 -->
+                <div class="chat-header"></div>
+
+                <!-- 聊天内容 -->
+                <div class="chat-body">
+                    <div class="message me">
+                    <div class="bubble">这是我发的消息</div>
+                    <img class="avatar" src="./assets/icons/avatar.jpg" alt="Me">
+                    </div>
+
+                    <div class="message other">
+                    <img class="avatar" src="other-avatar.png" alt="Other">
+                    <div class="bubble">这是对方的消息</div>
+                    </div>                    
                 </div>
-                <input class="footer-input">
+
+                <!-- 输入框 -->
+                <div class="chat-footer">
+                    <div class="footer-icon">
+                        <img src="./assets/icons/笑脸.svg" class="footer-icon">
+                        <img src="./assets/icons/文件.svg" class="footer-icon">
+                        <img src="./assets/icons/剪切.svg" class="footer-icon">
+                        <img src="./assets/icons/聊天.svg" class="footer-icon">
+                    </div>
+                    <input class="footer-input" id="input-chat">
+                </div>
             </div>
-        </div>
 
     </div>
 
+
+<script type="text/javascript" src="./we.js">
+</script>    
 </body>
 </html>
